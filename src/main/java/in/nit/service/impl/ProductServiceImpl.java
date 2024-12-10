@@ -10,9 +10,9 @@ import in.nit.model.Product;
 import in.nit.repo.ProductRepository;
 import in.nit.service.IProductService;
 
-@Service
+@Service // Logic
 public class ProductServiceImpl
-			implements IProductService {
+		implements IProductService {
 	@Autowired
 	private ProductRepository repo;
 
@@ -45,6 +45,5 @@ public class ProductServiceImpl
 	public boolean isProductExist(Integer id) {
 		return repo.existsById(id);
 	}
-	
-	
+
 }
